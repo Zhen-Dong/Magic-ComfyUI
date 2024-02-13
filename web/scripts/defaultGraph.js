@@ -596,53 +596,6 @@ export const defaultGraph = {
             horizontal: false
         }
     }, {
-        id: 172,
-        type: "UltimateSDUpscale",
-        pos: [4725, -738],
-        size: {
-            "0": 315,
-            "1": 614
-        },
-        flags: {},
-        order: 41,
-        mode: 0,
-        inputs: [{
-            name: "image",
-            type: "IMAGE",
-            link: 263
-        }, {
-            name: "model",
-            type: "MODEL",
-            link: 228
-        }, {
-            name: "positive",
-            type: "CONDITIONING",
-            link: 229
-        }, {
-            name: "negative",
-            type: "CONDITIONING",
-            link: 230
-        }, {
-            name: "vae",
-            type: "VAE",
-            link: 231
-        }, {
-            name: "upscale_model",
-            type: "UPSCALE_MODEL",
-            link: 413
-        }],
-        outputs: [{
-            name: "IMAGE",
-            type: "IMAGE",
-            links: [243],
-            shape: 3,
-            slot_index: 0
-        }],
-        properties: {
-            "Node name for S&R": "UltimateSDUpscale"
-        },
-        widgets_values: [2, 778790862587866, "randomize", 20, 8, "euler", "normal", 0.2, "Linear", 512, 512, 8, 32, "None", 1, 64, 8, 16, true, false]
-    }, {
         id: 183,
         type: "ImageCASharpening+",
         pos: [5109, -297],
@@ -654,7 +607,7 @@ export const defaultGraph = {
             collapsed: true
         },
         order: 42,
-        mode: 0,
+        mode: 4,
         inputs: [{
             name: "image",
             type: "IMAGE",
@@ -675,7 +628,7 @@ export const defaultGraph = {
         id: 51,
         type: "VHS_VideoCombine",
         pos: [3540, 13],
-        size: [930, 1214],
+        size: [930, 290],
         flags: {},
         order: 39,
         mode: 0,
@@ -729,7 +682,7 @@ export const defaultGraph = {
         id: 35,
         type: "VHS_VideoCombine",
         pos: [2526, 24],
-        size: [930, 1214],
+        size: [930, 290],
         flags: {},
         order: 29,
         mode: 0,
@@ -782,10 +735,10 @@ export const defaultGraph = {
         id: 176,
         type: "VHS_VideoCombine",
         pos: [4633, 29],
-        size: [930, 1214],
+        size: [930, 290],
         flags: {},
         order: 43,
-        mode: 0,
+        mode: 4,
         inputs: [{
             name: "images",
             type: "IMAGE",
@@ -1178,74 +1131,6 @@ export const defaultGraph = {
         color: "#322",
         bgcolor: "#533"
     }, {
-        id: 264,
-        type: "Note",
-        pos: [620, 1218],
-        size: {
-            "0": 534.8900146484375,
-            "1": 72.82633972167969
-        },
-        flags: {},
-        order: 7,
-        mode: 0,
-        properties: {
-            text: ""
-        },
-        widgets_values: ["Magic Album - 3D Gaussian Noise\n\nInitialize the frames by 3D Gaussian noise with covariance specified by cov_factor."],
-        color: "#432",
-        bgcolor: "#653"
-    }, {
-        id: 265,
-        type: "Note",
-        pos: [2426, 1444],
-        size: {
-            "0": 583.965576171875,
-            "1": 78.52656555175781
-        },
-        flags: {},
-        order: 8,
-        mode: 0,
-        properties: {
-            text: ""
-        },
-        widgets_values: ["Magic Album - Face Detailer\n\nApply Identity-specific VCD on the cropped frames of face to improve likeness. This modules is important whenever the face is small in the generated video."],
-        color: "#432",
-        bgcolor: "#653"
-    }, {
-        id: 266,
-        type: "Note",
-        pos: [4238, -694],
-        size: {
-            "0": 359.29656982421875,
-            "1": 62.93407440185547
-        },
-        flags: {},
-        order: 9,
-        mode: 0,
-        properties: {
-            text: ""
-        },
-        widgets_values: ["Magic Album - SR module\nApply Identity-specific VCD with super resolution model."],
-        color: "#432",
-        bgcolor: "#653"
-    }, {
-        id: 263,
-        type: "Note",
-        pos: [-423, 1338],
-        size: {
-            "0": 504.50054931640625,
-            "1": 130.17208862304688
-        },
-        flags: {},
-        order: 10,
-        mode: 0,
-        properties: {
-            text: ""
-        },
-        widgets_values: ["Magic Album - Prompt Travel\nUse Batch Prompt Schedule to assign different prompts for different range of frames.\n\nFor example, with the SCG Emotions Pack from (https://civitai.com/models/8860), the user can change the expression of the character by typing:\n\n\"0\":\"embedding:emotion-grin\",\n\"8\":\"embedding:emotion-smile\"\n\n"],
-        color: "#432",
-        bgcolor: "#653"
-    }, {
         id: 60,
         type: "Reroute",
         pos: [1120, 1450],
@@ -1356,7 +1241,7 @@ export const defaultGraph = {
             "1": 82
         },
         flags: {},
-        order: 11,
+        order: 7,
         mode: 0,
         inputs: [{
             name: "prev_motion_lora",
@@ -1414,6 +1299,112 @@ export const defaultGraph = {
             "Node name for S&R": "BatchPromptSchedule"
         },
         widgets_values: ["\"0\":\"\",\n\"8\":\"\"", 120, false, "a photo of embedding:altman man in superman costume in the outer space, stars in the background", "", 0, 0, 0, 0, 0]
+    }, {
+        id: 264,
+        type: "Note",
+        pos: [620, 1218],
+        size: {
+            "0": 534.8900146484375,
+            "1": 72.82633972167969
+        },
+        flags: {},
+        order: 8,
+        mode: 0,
+        properties: {
+            text: ""
+        },
+        widgets_values: ["Magic-Me - 3D Gaussian Noise\n\nInitialize the frames by 3D Gaussian noise with covariance specified by cov_factor."],
+        color: "#432",
+        bgcolor: "#653"
+    }, {
+        id: 263,
+        type: "Note",
+        pos: [-423, 1338],
+        size: [459.935874738757, 366.1690614853021],
+        flags: {},
+        order: 9,
+        mode: 0,
+        properties: {
+            text: ""
+        },
+        widgets_values: ["Magic-Me - Prompt Embedding\nUse the following available embeddings in the prompt\n \nembedding:altman man\nembedding:andrew_ng man\nembedding:bengio man\nembedding:beyonce woman\nembedding:biden man\nembedding:harry man\nembedding:hermione woman\nembedding:hinton man\nembedding:huang man\nembedding:ironman man\nembedding:jack_chen man\nembedding:johnson man\nembedding:lecun man\nembedding:lifeifei woman\nembedding:lisa woman\nembedding:eli man\nembedding:mona woman\nembedding:monroe woman\nembedding:musk man\nembedding:obama man\nembedding:scarlett woman\nembedding:taylor woman\nembedding:trump man\nembedding:zuck man"],
+        color: "#432",
+        bgcolor: "#653"
+    }, {
+        id: 172,
+        type: "UltimateSDUpscale",
+        pos: [4725, -738],
+        size: {
+            "0": 315,
+            "1": 614
+        },
+        flags: {},
+        order: 41,
+        mode: 4,
+        inputs: [{
+            name: "image",
+            type: "IMAGE",
+            link: 263
+        }, {
+            name: "model",
+            type: "MODEL",
+            link: 228
+        }, {
+            name: "positive",
+            type: "CONDITIONING",
+            link: 229
+        }, {
+            name: "negative",
+            type: "CONDITIONING",
+            link: 230
+        }, {
+            name: "vae",
+            type: "VAE",
+            link: 231
+        }, {
+            name: "upscale_model",
+            type: "UPSCALE_MODEL",
+            link: 413
+        }],
+        outputs: [{
+            name: "IMAGE",
+            type: "IMAGE",
+            links: [243],
+            shape: 3,
+            slot_index: 0
+        }],
+        properties: {
+            "Node name for S&R": "UltimateSDUpscale"
+        },
+        widgets_values: [2, 778790862587866, "randomize", 20, 8, "euler", "normal", 0.2, "Linear", 512, 512, 8, 32, "None", 1, 64, 8, 16, true, false]
+    }, {
+        id: 266,
+        type: "Note",
+        pos: [4171, -692],
+        size: [430.570025935036, 78.18883355204923],
+        flags: {},
+        order: 10,
+        mode: 0,
+        properties: {
+            text: ""
+        },
+        widgets_values: ["Magic-Me - Tiled VCD\nThe Tiled VCD consumes much more GPU resources and are bypassed to save time. If you are using V100/A100, please right click the two purple nodes and click \"Bypass\" to enable this function."],
+        color: "#432",
+        bgcolor: "#653"
+    }, {
+        id: 265,
+        type: "Note",
+        pos: [2128, 1401],
+        size: [449.88099137905647, 111.7443119880777],
+        flags: {},
+        order: 11,
+        mode: 0,
+        properties: {
+            text: ""
+        },
+        widgets_values: ["Magic-Me - Face VCD\n\nApply Face VCD on the cropped frames of face to improve likeness. This modules is important whenever the face is small in the generated video."],
+        color: "#432",
+        bgcolor: "#653"
     }],
     links: [
         [47, 10, 0, 35, 0, "IMAGE"],
