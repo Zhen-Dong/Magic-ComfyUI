@@ -752,7 +752,7 @@
       },
       "widgets_values": [
         "disable",
-        774476516625499,
+        929671733006795,
         "randomize",
         20,
         8,
@@ -965,7 +965,7 @@
       },
       "widgets_values": [
         2,
-        362524318073972,
+        778790862587866,
         "randomize",
         20,
         8,
@@ -1084,7 +1084,7 @@
           "hidden": false,
           "paused": false,
           "params": {
-            "filename": "face_detailer_00021.mp4",
+            "filename": "face_detailer_00001.mp4",
             "subfolder": "",
             "type": "temp",
             "format": "video/h264-mp4"
@@ -1150,7 +1150,7 @@
           "hidden": false,
           "paused": true,
           "params": {
-            "filename": "orig_00029.mp4",
+            "filename": "orig_00001.mp4",
             "subfolder": "",
             "type": "temp",
             "format": "video/h264-mp4"
@@ -1218,7 +1218,7 @@
           "hidden": false,
           "paused": false,
           "params": {
-            "filename": "SR_00053.mp4",
+            "filename": "SR_00001.mp4",
             "subfolder": "",
             "type": "output",
             "format": "video/h265-mp4"
@@ -1898,7 +1898,7 @@
         512,
         512,
         1,
-        674280267919247,
+        153983470245199,
         "randomize",
         0.15
       ]
@@ -1973,16 +1973,56 @@
       ]
     },
     {
+      "id": 196,
+      "type": "ADE_AnimateDiffLoRALoader",
+      "pos": [
+        -375,
+        -182
+      ],
+      "size": {
+        "0": 355.20001220703125,
+        "1": 82
+      },
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "prev_motion_lora",
+          "type": "MOTION_LORA",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MOTION_LORA",
+          "type": "MOTION_LORA",
+          "links": [
+            417
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ADE_AnimateDiffLoRALoader"
+      },
+      "widgets_values": [
+        "v2_lora_ZoomIn.ckpt",
+        0.6
+      ]
+    },
+    {
       "id": 202,
       "type": "BatchPromptSchedule",
       "pos": [
         148,
         1176
       ],
-      "size": [
-        379.556396484375,
-        501.3092041015625
-      ],
+      "size": {
+        "0": 379.556396484375,
+        "1": 501.3092041015625
+      },
       "flags": {},
       "order": 15,
       "mode": 0,
@@ -2026,53 +2066,13 @@
         "\"0\":\"\",\n\"8\":\"\"",
         120,
         false,
-        "a photo of embedding:altman-gstep-200 man in superman costume in the outer space, stars in the background",
+        "a photo of embedding:altman man in superman costume in the outer space, stars in the background",
         "",
         0,
         0,
         0,
         0,
         0
-      ]
-    },
-    {
-      "id": 196,
-      "type": "ADE_AnimateDiffLoRALoader",
-      "pos": [
-        -375,
-        -182
-      ],
-      "size": {
-        "0": 355.20001220703125,
-        "1": 82
-      },
-      "flags": {},
-      "order": 11,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "prev_motion_lora",
-          "type": "MOTION_LORA",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MOTION_LORA",
-          "type": "MOTION_LORA",
-          "links": [
-            417
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ADE_AnimateDiffLoRALoader"
-      },
-      "widgets_values": [
-        "v2_lora_ZoomIn.ckpt",
-        0.6
       ]
     }
   ],

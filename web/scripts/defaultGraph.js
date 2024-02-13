@@ -497,7 +497,7 @@ export const defaultGraph = {
         properties: {
             "Node name for S&R": "KSamplerAdvanced"
         },
-        widgets_values: ["disable", 774476516625499, "randomize", 20, 8, "dpmpp_2m", "karras", 0, 20, "disable"]
+        widgets_values: ["disable", 929671733006795, "randomize", 20, 8, "dpmpp_2m", "karras", 0, 20, "disable"]
     }, {
         id: 175,
         type: "FromBasicPipe",
@@ -641,7 +641,7 @@ export const defaultGraph = {
         properties: {
             "Node name for S&R": "UltimateSDUpscale"
         },
-        widgets_values: [2, 362524318073972, "randomize", 20, 8, "euler", "normal", 0.2, "Linear", 512, 512, 8, 32, "None", 1, 64, 8, 16, true, false]
+        widgets_values: [2, 778790862587866, "randomize", 20, 8, "euler", "normal", 0.2, "Linear", 512, 512, 8, 32, "None", 1, 64, 8, 16, true, false]
     }, {
         id: 183,
         type: "ImageCASharpening+",
@@ -716,7 +716,7 @@ export const defaultGraph = {
                 hidden: false,
                 paused: false,
                 params: {
-                    filename: "face_detailer_00021.mp4",
+                    filename: "face_detailer_00001.mp4",
                     subfolder: "",
                     type: "temp",
                     format: "video/h264-mp4"
@@ -769,7 +769,7 @@ export const defaultGraph = {
                 hidden: false,
                 paused: true,
                 params: {
-                    filename: "orig_00029.mp4",
+                    filename: "orig_00001.mp4",
                     subfolder: "",
                     type: "temp",
                     format: "video/h264-mp4"
@@ -824,7 +824,7 @@ export const defaultGraph = {
                 hidden: false,
                 paused: false,
                 params: {
-                    filename: "SR_00053.mp4",
+                    filename: "SR_00001.mp4",
                     subfolder: "",
                     type: "output",
                     format: "video/h265-mp4"
@@ -1297,7 +1297,7 @@ export const defaultGraph = {
         properties: {
             "Node name for S&R": "MagicAlbum3DGaussianNoise"
         },
-        widgets_values: [512, 512, 1, 674280267919247, "randomize", 0.15]
+        widgets_values: [512, 512, 1, 153983470245199, "randomize", 0.15]
     }, {
         id: 261,
         type: "ADE_AnimateDiffLoaderWithContext",
@@ -1348,10 +1348,40 @@ export const defaultGraph = {
         },
         widgets_values: ["mm_sd_v15_v2.ckpt", "autoselect", 1, true]
     }, {
+        id: 196,
+        type: "ADE_AnimateDiffLoRALoader",
+        pos: [-375, -182],
+        size: {
+            "0": 355.20001220703125,
+            "1": 82
+        },
+        flags: {},
+        order: 11,
+        mode: 0,
+        inputs: [{
+            name: "prev_motion_lora",
+            type: "MOTION_LORA",
+            link: null
+        }],
+        outputs: [{
+            name: "MOTION_LORA",
+            type: "MOTION_LORA",
+            links: [417],
+            shape: 3,
+            slot_index: 0
+        }],
+        properties: {
+            "Node name for S&R": "ADE_AnimateDiffLoRALoader"
+        },
+        widgets_values: ["v2_lora_ZoomIn.ckpt", 0.6]
+    }, {
         id: 202,
         type: "BatchPromptSchedule",
         pos: [148, 1176],
-        size: [379.556396484375, 501.3092041015625],
+        size: {
+            "0": 379.556396484375,
+            "1": 501.3092041015625
+        },
         flags: {},
         order: 15,
         mode: 0,
@@ -1383,34 +1413,7 @@ export const defaultGraph = {
         properties: {
             "Node name for S&R": "BatchPromptSchedule"
         },
-        widgets_values: ["\"0\":\"\",\n\"8\":\"\"", 120, false, "a photo of embedding:altman-gstep-200 man in superman costume in the outer space, stars in the background", "", 0, 0, 0, 0, 0]
-    }, {
-        id: 196,
-        type: "ADE_AnimateDiffLoRALoader",
-        pos: [-375, -182],
-        size: {
-            "0": 355.20001220703125,
-            "1": 82
-        },
-        flags: {},
-        order: 11,
-        mode: 0,
-        inputs: [{
-            name: "prev_motion_lora",
-            type: "MOTION_LORA",
-            link: null
-        }],
-        outputs: [{
-            name: "MOTION_LORA",
-            type: "MOTION_LORA",
-            links: [417],
-            shape: 3,
-            slot_index: 0
-        }],
-        properties: {
-            "Node name for S&R": "ADE_AnimateDiffLoRALoader"
-        },
-        widgets_values: ["v2_lora_ZoomIn.ckpt", 0.6]
+        widgets_values: ["\"0\":\"\",\n\"8\":\"\"", 120, false, "a photo of embedding:altman man in superman costume in the outer space, stars in the background", "", 0, 0, 0, 0, 0]
     }],
     links: [
         [47, 10, 0, 35, 0, "IMAGE"],
