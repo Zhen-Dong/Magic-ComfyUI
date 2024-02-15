@@ -6,4 +6,4 @@
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 ## About
-This is a customized ComfyUI repo for [Magic-Me](https://github.com/Zhen-Dong/Magic-Me/). If you are looking for original ComfyUI repo, please go to https://github.com/comfyanonymous/ComfyUI.
+This is a customized ComfyUI repo for [Magic-Me](https://github.com/Zhen-Dong/Magic-Me/). If you are looking for original ComfyUI repo, please go to [ComfyUI](https://github.com/comfyanonymous/ComfyUI).
