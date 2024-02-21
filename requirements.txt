@@ -1,6 +1,6 @@
-torch
+torch==2.0.0
 torchsde
-torchvision
+torchvision>=0.15.1
 einops
 transformers>=4.25.1
 safetensors>=0.3.0
@@ -10,3 +10,17 @@ Pillow
 scipy
 tqdm
 psutil
+numba
+colour-science
+rembg
+pandas
+numexpr
+segment-anything
+scikit-image
+piexif
+opencv-python-headless
+GitPython
+matrix-client==0.4.0
+huggingface-hub>0.20
+opencv-python
+imageio-ffmpeg
