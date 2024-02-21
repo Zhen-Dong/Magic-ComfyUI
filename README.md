@@ -1,3 +1,14 @@
+---
+title: Magic-Me
+emoji: 🚀
+sdk: gradio
+sdk_version: 4.18.0
+python_version: 3.9
+app_file: main.py
+pinned: false
+---
+
+
 **Project Page: [Magic-Me](https://magic-me-webpage.github.io/)**
 
 # ComfyUI customized for Magic-Me
