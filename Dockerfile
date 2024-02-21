@@ -44,7 +44,7 @@ RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 WORKDIR $HOME/app
 
 # Copy the current directory contents into the container at $HOME/app setting the owner to the user
-COPY . .
+COPY --chown=user . $HOME/app
 
 # Checkpoints
 CMD ["python", "main.py", "--listen", "0.0.0.0", "--cpu", "--port", "7860", "--output-directory", "${USE_PERSISTENT_DATA:+/data/}"]
