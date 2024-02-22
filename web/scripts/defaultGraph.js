@@ -497,7 +497,7 @@ export const defaultGraph = {
         properties: {
             "Node name for S&R": "KSamplerAdvanced"
         },
-        widgets_values: ["disable", 929671733006795, "randomize", 20, 8, "dpmpp_2m", "karras", 0, 20, "disable"]
+        widgets_values: ["disable", 1046637237661004, "randomize", 20, 8, "dpmpp_2m", "karras", 0, 20, "disable"]
     }, {
         id: 175,
         type: "FromBasicPipe",
@@ -560,7 +560,7 @@ export const defaultGraph = {
             collapsed: true
         },
         order: 1,
-        mode: 0,
+        mode: 4,
         outputs: [{
             name: "UPSCALE_MODEL",
             type: "UPSCALE_MODEL",
@@ -607,7 +607,7 @@ export const defaultGraph = {
             collapsed: true
         },
         order: 42,
-        mode: 4,
+        mode: 0,
         inputs: [{
             name: "image",
             type: "IMAGE",
@@ -625,64 +625,10 @@ export const defaultGraph = {
         },
         widgets_values: [0.2]
     }, {
-        id: 51,
-        type: "VHS_VideoCombine",
-        pos: [3540, 13],
-        size: [930, 290],
-        flags: {},
-        order: 39,
-        mode: 0,
-        inputs: [{
-            name: "images",
-            type: "IMAGE",
-            link: 132
-        }, {
-            name: "audio",
-            type: "VHS_AUDIO",
-            link: null
-        }, {
-            name: "batch_manager",
-            type: "VHS_BatchManager",
-            link: null
-        }],
-        outputs: [{
-            name: "Filenames",
-            type: "VHS_FILENAMES",
-            links: null,
-            shape: 3
-        }],
-        title: "Video Combine - Face Detailed",
-        properties: {
-            "Node name for S&R": "VHS_VideoCombine"
-        },
-        widgets_values: {
-            frame_rate: 8,
-            loop_count: 0,
-            filename_prefix: "face_detailer",
-            format: "video/h264-mp4",
-            pix_fmt: "yuv420p",
-            crf: 20,
-            save_metadata: true,
-            pingpong: false,
-            save_output: false,
-            videopreview: {
-                hidden: false,
-                paused: false,
-                params: {
-                    filename: "face_detailer_00001.mp4",
-                    subfolder: "",
-                    type: "temp",
-                    format: "video/h264-mp4"
-                }
-            }
-        },
-        color: "#322",
-        bgcolor: "#533"
-    }, {
         id: 35,
         type: "VHS_VideoCombine",
         pos: [2526, 24],
-        size: [930, 290],
+        size: [930, 1214],
         flags: {},
         order: 29,
         mode: 0,
@@ -735,7 +681,7 @@ export const defaultGraph = {
         id: 176,
         type: "VHS_VideoCombine",
         pos: [4633, 29],
-        size: [930, 290],
+        size: [930, 1214],
         flags: {},
         order: 43,
         mode: 4,
@@ -1182,7 +1128,7 @@ export const defaultGraph = {
         properties: {
             "Node name for S&R": "MagicAlbum3DGaussianNoise"
         },
-        widgets_values: [512, 512, 1, 153983470245199, "randomize", 0.15]
+        widgets_values: [512, 512, 1, 298763718229119, "randomize", 0.15]
     }, {
         id: 261,
         type: "ADE_AnimateDiffLoaderWithContext",
@@ -1320,7 +1266,10 @@ export const defaultGraph = {
         id: 263,
         type: "Note",
         pos: [-423, 1338],
-        size: [459.935874738757, 366.1690614853021],
+        size: {
+            "0": 459.9358825683594,
+            "1": 366.1690673828125
+        },
         flags: {},
         order: 9,
         mode: 0,
@@ -1376,33 +1325,93 @@ export const defaultGraph = {
         properties: {
             "Node name for S&R": "UltimateSDUpscale"
         },
-        widgets_values: [2, 778790862587866, "randomize", 20, 8, "euler", "normal", 0.2, "Linear", 512, 512, 8, 32, "None", 1, 64, 8, 16, true, false]
+        widgets_values: [2, 404061793704340, "randomize", 20, 8, "euler", "normal", 0.2, "Linear", 512, 512, 8, 32, "None", 1, 64, 8, 16, true, false]
     }, {
-        id: 266,
+        id: 265,
         type: "Note",
-        pos: [4171, -692],
-        size: [430.570025935036, 78.18883355204923],
+        pos: [2128, 1401],
+        size: {
+            "0": 449.8809814453125,
+            "1": 111.74430847167969
+        },
         flags: {},
         order: 10,
         mode: 0,
         properties: {
             text: ""
         },
-        widgets_values: ["Magic-Me - Tiled VCD\nThe Tiled VCD consumes much more GPU resources and are bypassed to save time. If you are using V100/A100, please right click the two purple nodes and click \"Bypass\" to enable this function."],
+        widgets_values: ["Magic-Me - Face VCD\n\nApply Face VCD on the cropped frames of face to improve likeness. This modules is important whenever the face is small in the generated video."],
         color: "#432",
         bgcolor: "#653"
     }, {
-        id: 265,
+        id: 51,
+        type: "VHS_VideoCombine",
+        pos: [3565, 41],
+        size: [930, 1214],
+        flags: {},
+        order: 39,
+        mode: 0,
+        inputs: [{
+            name: "images",
+            type: "IMAGE",
+            link: 132
+        }, {
+            name: "audio",
+            type: "VHS_AUDIO",
+            link: null
+        }, {
+            name: "batch_manager",
+            type: "VHS_BatchManager",
+            link: null
+        }],
+        outputs: [{
+            name: "Filenames",
+            type: "VHS_FILENAMES",
+            links: null,
+            shape: 3
+        }],
+        title: "Video Combine - Face Detailed",
+        properties: {
+            "Node name for S&R": "VHS_VideoCombine"
+        },
+        widgets_values: {
+            frame_rate: 8,
+            loop_count: 0,
+            filename_prefix: "face_detailer",
+            format: "video/h264-mp4",
+            pix_fmt: "yuv420p",
+            crf: 20,
+            save_metadata: true,
+            pingpong: false,
+            save_output: false,
+            videopreview: {
+                hidden: false,
+                paused: false,
+                params: {
+                    filename: "face_detailer_00001.mp4",
+                    subfolder: "",
+                    type: "temp",
+                    format: "video/h264-mp4"
+                }
+            }
+        },
+        color: "#322",
+        bgcolor: "#533"
+    }, {
+        id: 266,
         type: "Note",
-        pos: [2128, 1401],
-        size: [449.88099137905647, 111.7443119880777],
+        pos: [4171, -692],
+        size: {
+            "0": 430.5700378417969,
+            "1": 78.18883514404297
+        },
         flags: {},
         order: 11,
         mode: 0,
         properties: {
             text: ""
         },
-        widgets_values: ["Magic-Me - Face VCD\n\nApply Face VCD on the cropped frames of face to improve likeness. This modules is important whenever the face is small in the generated video."],
+        widgets_values: ["Magic-Me - Tiled VCD\nThe Tiled VCD consumes much more GPU resources and are bypassed to save time. If you are using V100/A100, please right click the 3 purple nodes and click \"Bypass\" to enable this function."],
         color: "#432",
         bgcolor: "#653"
     }],
